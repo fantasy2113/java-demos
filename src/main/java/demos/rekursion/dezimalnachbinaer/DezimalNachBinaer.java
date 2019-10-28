@@ -10,12 +10,12 @@ package demos.rekursion.dezimalnachbinaer;
  */
 public class DezimalNachBinaer {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        new NewClass().printBinary(26);
-    }
+	/**
+	 * @param args the command line arguments
+	 */
+	public static void main(String[] args) {
+		// TODO code application logic here
+		new NewClass().printBinary(26);
+	}
 
 }

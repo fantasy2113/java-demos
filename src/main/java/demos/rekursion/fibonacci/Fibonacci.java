@@ -10,16 +10,16 @@ package demos.rekursion.fibonacci;
  */
 public class Fibonacci {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        NewClass obj = new NewClass();
-        for (int i = 1; i <= 20; i++) {
-            System.out.print(obj.fibonacci(i) + " ");
-        }
+	/**
+	 * @param args the command line arguments
+	 */
+	public static void main(String[] args) {
+		// TODO code application logic here
+		NewClass obj = new NewClass();
+		for (int i = 1; i <= 20; i++) {
+			System.out.print(obj.fibonacci(i) + " ");
+		}
 
-    }
+	}
 
 }

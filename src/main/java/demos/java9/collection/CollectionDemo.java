@@ -10,11 +10,11 @@ import java.util.Set;
  */
 public class CollectionDemo {
 
-    public static void main(String[] args) {
-        List<String> lst = List.of("Hello");
-        Set.of("Test");
-        Map.of("key", "value");
-        Map.ofEntries(new AbstractMap.SimpleImmutableEntry<String, String>("key", "value"));
-    }
+	public static void main(String[] args) {
+		List<String> lst = List.of("Hello");
+		Set.of("Test");
+		Map.of("key", "value");
+		Map.ofEntries(new AbstractMap.SimpleImmutableEntry<String, String>("key", "value"));
+	}
 
 }

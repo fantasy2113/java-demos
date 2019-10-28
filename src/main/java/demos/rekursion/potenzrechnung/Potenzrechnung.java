@@ -10,16 +10,16 @@ package demos.rekursion.potenzrechnung;
  */
 public class Potenzrechnung {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        NewClass obj = new NewClass();
-        System.out.println(obj.power(3, 3));
-        System.out.println(obj.power(3, 8));
-        System.out.println(obj.power(2, 18));
+	/**
+	 * @param args the command line arguments
+	 */
+	public static void main(String[] args) {
+		// TODO code application logic here
+		NewClass obj = new NewClass();
+		System.out.println(obj.power(3, 3));
+		System.out.println(obj.power(3, 8));
+		System.out.println(obj.power(2, 18));
 
-    }
+	}
 
 }

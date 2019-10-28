@@ -9,12 +9,12 @@ package demos.rekursion.verknuepftelisterueckwaerts;
  * @author trainer
  */
 public class NewClass {
-    public void printList(Node n) {
-        if (n != null) {
+	public void printList(Node n) {
+		if (n != null) {
 
-            printList(n.next);
-            System.out.println(n.value + " ");
-        }
-    }
+			printList(n.next);
+			System.out.println(n.value + " ");
+		}
+	}
 
 }
