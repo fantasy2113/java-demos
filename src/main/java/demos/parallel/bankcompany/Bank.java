@@ -1,23 +1,34 @@
 package demos.parallel.bankcompany;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Bank {
-    private Account[] accounts;
+    private List<Account> accounts;
 
     public Bank() {
-        accounts = new Account[100];
-        for (int i = 0; i < accounts.length; i++) {
-            accounts[i] = new Account();
+        accounts = new ArrayList<>();
+        for (int nr = 0; nr < 100000; nr++) {
+            accounts.add(new Account(nr));
         }
     }
 
     public synchronized void bookSynchronized(int accountNr, float amount) {
-        book(amount, accounts[accountNr]);
+        book(amount, getAccount(accountNr));
     }
 
     public void bookParallel(int accountNr, float amount) {
-        synchronized (accounts[accountNr]) {
-            book(amount, accounts[accountNr]);
+        Account account = getAccount(accountNr);
+        synchronized (account) {
+            book(amount, account);
         }
+    }
+
+    private Account getAccount(int accountNr) {
+        return accounts.stream()
+                .filter(a -> a.getNr() == accountNr)
+                .findAny()
+                .orElse(null);
     }
 
     private void book(float amount, Account account) {
