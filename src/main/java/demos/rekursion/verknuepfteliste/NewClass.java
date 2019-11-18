@@ -9,11 +9,11 @@ package demos.rekursion.verknuepfteliste;
  * @author trainer
  */
 public class NewClass {
-	public void printList(Node n) {
-		if (n != null) {
-			System.out.println(n.value + " ");
-			printList(n.next);
-		}
-	}
+    public void printList(Node n) {
+        if (n != null) {
+            System.out.println(n.value + " ");
+            printList(n.next);
+        }
+    }
 
 }

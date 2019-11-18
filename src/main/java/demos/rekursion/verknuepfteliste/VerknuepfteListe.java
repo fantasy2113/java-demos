@@ -10,18 +10,18 @@ package demos.rekursion.verknuepfteliste;
  */
 public class VerknuepfteListe {
 
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String[] args) {
-		// TODO code application logic here
-		Node node1 = new Node(1, null);
-		Node node2 = new Node(2, null);
-		Node node3 = new Node(3, null);
-		node1.next = node2;
-		node2.next = node3;
-		node3.next = null;
-		new NewClass().printList(node1);
-	}
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Node node1 = new Node(1, null);
+        Node node2 = new Node(2, null);
+        Node node3 = new Node(3, null);
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = null;
+        new NewClass().printList(node1);
+    }
 
 }

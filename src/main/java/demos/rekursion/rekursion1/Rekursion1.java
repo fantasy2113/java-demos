@@ -10,12 +10,12 @@ package demos.rekursion.rekursion1;
  */
 public class Rekursion1 {
 
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String[] args) {
-		// TODO code application logic here
-		new NewClass().rek();
-	}
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        new NewClass().rek();
+    }
 
 }

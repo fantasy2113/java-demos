@@ -10,12 +10,12 @@ package demos.rekursion.fakultaet;
  */
 public class Fakultaet {
 
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String[] args) {
-		// TODO code application logic here
-		System.out.println(new NewClass().fak(5));
-	}
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        System.out.println(new NewClass().fak(5));
+    }
 
 }

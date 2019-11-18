@@ -9,12 +9,12 @@ package demos.rekursion.rekursion1;
  * @author trainer
  */
 public class NewClass {
-	int i = 10;
+    int i = 10;
 
-	public void rek() {
-		i--;
-		if (i > 0)
-			rek();
-	}
+    public void rek() {
+        i--;
+        if (i > 0)
+            rek();
+    }
 
 }

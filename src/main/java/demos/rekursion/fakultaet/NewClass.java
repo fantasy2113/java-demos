@@ -9,10 +9,10 @@ package demos.rekursion.fakultaet;
  * @author trainer
  */
 public class NewClass {
-	public int fak(int b) {
-		if (b == 1)
-			return 1;
-		return b * fak(b - 1);
+    public int fak(int b) {
+        if (b == 1)
+            return 1;
+        return b * fak(b - 1);
 
-	}
+    }
 }

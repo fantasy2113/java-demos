@@ -7,28 +7,28 @@ import java.io.IOException;
  */
 public class ProcessDemo {
 
-	public static void main(String[] args) {
-		ProcessHandle currentProcess = ProcessHandle.current();
-		System.out.println(currentProcess.info().command());
+    public static void main(String[] args) {
+        ProcessHandle currentProcess = ProcessHandle.current();
+        System.out.println(currentProcess.info().command());
 
-		ProcessBuilder builder = new ProcessBuilder().command("cmd");
-		try {
-			Process p = builder.start();
-			ProcessHandle processHandle = p.toHandle();
-			processHandle.onExit().whenComplete((h, t) -> System.out.println("Process exited"));
-			processHandle.destroy();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+        ProcessBuilder builder = new ProcessBuilder().command("cmd");
+        try {
+            Process p = builder.start();
+            ProcessHandle processHandle = p.toHandle();
+            processHandle.onExit().whenComplete((h, t) -> System.out.println("Process exited"));
+            processHandle.destroy();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-		ProcessHandle.allProcesses().filter(p -> p.info().command().map(cmd -> cmd.contains("notepad")).orElse(false))
-				.findFirst().ifPresent(ProcessHandle::destroy);
+        ProcessHandle.allProcesses().filter(p -> p.info().command().map(cmd -> cmd.contains("notepad")).orElse(false))
+                .findFirst().ifPresent(ProcessHandle::destroy);
 
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

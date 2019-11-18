@@ -9,21 +9,21 @@ package demos.rekursion.verknuepftelisterueckwaerts;
  * @author trainer
  */
 public class Node {
-	int value;
-	Node next;
+    int value;
+    Node next;
 
-	public Node() {
-		value = 0;
-		next = null;
-	}
+    public Node() {
+        value = 0;
+        next = null;
+    }
 
-	public Node(int value, Node next) {
-		this.value = value;
-		this.next = next;
-	}
+    public Node(int value, Node next) {
+        this.value = value;
+        this.next = next;
+    }
 
-	public String toString() {
-		return value + "";
-	}
+    public String toString() {
+        return value + "";
+    }
 
 }
