@@ -1,9 +1,9 @@
-package demos.parallel.bankbetrieb;
+package demos.parallel.bankcompany;
 
-public class BankAngestellte extends Thread {
+public class Employee extends Thread {
     private Bank bank;
 
-    public BankAngestellte(String name, Bank bank) {
+    public Employee(String name, Bank bank) {
         super(name);
         this.bank = bank;
         start();
@@ -13,13 +13,13 @@ public class BankAngestellte extends Thread {
         for (int i = 0; i < 10000; i++) {
             // Kontonummer einlesen;
             // simuliert durch Wahl einer Zufallszahl zwischen 0 und 99
-            int kontonr = (int) (Math.random() * 100);
+            int accountNr = (int) (Math.random() * 100);
             // Überweisungsbetrag einlesen;
             // simuliert durch Wahl einer Zufallszahl
             // zwischen -500 und +499
-            float betrag = (int) (Math.random() * 1000) - 500;
-            bank.buchenParallel(kontonr, betrag);
-            System.out.println("Buchung: " + this.getName() + " - KontoNr: " + kontonr + " - Betrag: " + betrag);
+            float amount = (int) (Math.random() * 1000) - 500;
+            bank.bookParallel(accountNr, amount);
+            System.out.println("Booking: " + this.getName() + " - Account-Nr.: " + accountNr + " - Amount: " + amount);
         }
     }
 }
